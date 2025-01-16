@@ -1,0 +1,28 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Must be read local_ref, local_sha, remote_ref, remote_sha variables for compare to protected_ref and build_branch_type
+while read local_ref local_sha remote_ref remote_sha
+do
+    push_ref=$remote_ref
+    push_branch=$(echo "$push_ref" | sed -n -e "s/refs\/heads\/\(.*\)/\1/p")
+
+    # push_branch_type=$(echo "$push_branch" | sed -n -e "s/\([^\/]*\)\/\?\(.*\)/\1/p")
+
+    # if [ $build_branch_type = $push_branch_type ]
+    # then
+    #     build $push_branch
+    # fi
+
+    # protected_ref=$(git show-ref --heads -- "refs/heads/$protected_branch" | sed -n -e "s/\(.*\)[[:space:]]\(.*\)$/\2/p")
+
+    # if [ $protected_ref = $push_ref ]
+    # then
+    #     build_clean
+
+    #     e2e $push_branch
+    # fi
+
+    exit 0 # push will execute
+done
+

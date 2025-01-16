@@ -1,0 +1,13 @@
+{
+  "name": "live-custom-pages",
+  "private": false,
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.7.1",
+    "husky": "7.0.4",
+    "lint-staged": "12.4.2",
+    "prettier": "2.7.1"
+  }
+}
